@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Section({children}) {
+function Section({children,isDark=false}) {
   return (
     <div
-    className='p-10 bg-background'
+    className={`p-10 ${isDark?'bg-dark':'bg-background'}`}
     >
         {children}
     </div>
