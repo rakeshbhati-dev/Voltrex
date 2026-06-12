@@ -14,18 +14,18 @@ function Hero() {
             <div className='absolute inset-0 bg-gradient-to-t from-dark to-dark/60'></div>
             <div className='relative px-10 pb-[80px] max-w-[860px]'>
                 <h3 className='uppercase tracking-wider text-sm text-primary font-semibold mt-5 tracking-widest border-l-3 border-primary pl-3'>Pune's Elite Fitness Studio</h3>
-                <h1 className='text-8xl text-white font-bold'>VOLTREX YOUR <br />
+                <h1 className='text-8xl text-white font-black'>VOLTREX YOUR <br />
                 <em className='text-primary'>POWER</em>
                  </h1>
                  <p className='text-gray tracking-widest max-w-[480px] mt-5'>No excuses. No shortcuts. Just relentless work — every day, every rep, every set. Your transformation starts here.</p>
-                 <div className='flex gap-4 mt-7'>
+                 <div className='flex gap-4 mt-7 z-40'>
                     <Button 
                  title='Start training'
-                 buttonStyle='md:py-4 cursor-pointer'
+                 buttonStyle='md:py-4 cursor-pointer z-40'
                  />
                  <Button 
                  title='View Programs'
-                 buttonStyle='bg-transparent border border-gray md:py-4 hover:bg-primary hover:border-primary cursor-pointer'
+                 buttonStyle='bg-transparent border border-gray md:py-4 hover:bg-primary hover:border-primary cursor-pointer z-40'
                  />
                  </div>
             </div>
