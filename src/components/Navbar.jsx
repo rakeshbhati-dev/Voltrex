@@ -6,7 +6,7 @@ import { Menu, X } from 'lucide-react'
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <nav className='bg-dark/98 border-b border-border sticky top-0 z-10'>
+        <nav className='bg-dark/98 border-b border-border sticky top-0 z-1000'>
             <div className='flex justify-between items-center py-6 px-6 md:px-10'>
                 <Logo />
                 <div className='hidden md:flex text-gray gap-6 font-semibold text-sm tracking-wider'>
