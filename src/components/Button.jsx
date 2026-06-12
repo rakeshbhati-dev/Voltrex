@@ -8,7 +8,7 @@ function Button({
   return (
     <button
     onClick={onClick}
-    className={` font-bold text-white bg-primary py-2 px-6 tracking-widest text-sm ${buttonStyle}`}
+    className={` font-bold text-white bg-primary py-2 px-6 tracking-widest text-sm uppercase ${buttonStyle}`}
     >{title}</button>
   )
 }
