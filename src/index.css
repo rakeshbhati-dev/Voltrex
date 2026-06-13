@@ -11,3 +11,7 @@
   --color-background:#1F1F1F;
   --font-sans:"Barlow Condensed", sans-serif;
 }
+
+html {
+  @apply scroll-smooth;
+}
