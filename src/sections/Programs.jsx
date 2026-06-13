@@ -18,7 +18,7 @@ function Programs() {
         />
         <Button 
         title='All Programs &#8594;' 
-        buttonStyle='bg-transparent border border-gray cursor-pointer hover:bg-primary hover:border-primary'
+        buttonStyle='bg-transparent border border-gray cursor-pointer hover:bg-primary hover:border-primary text-white'
         />
       </div>
 
