@@ -6,10 +6,12 @@ import About from './sections/About'
 import Trainer from './sections/Trainer'
 import Plans from './sections/Plans'
 import Gallery from './sections/Gallery'
+import Banner from './sections/Banner'
+import Footer from './sections/Footer'
 
 function App() {
   return (
-    <div className='background-dark text-sans leading-normal'>
+    <div className='bg-dark text-sans leading-normal'>
       <Navbar />
       <Hero />
       <Programs />
@@ -17,6 +19,8 @@ function App() {
       <Trainer />
       <Plans />
       <Gallery />
+      <Banner />
+      <Footer />
     </div>
   )
 }
