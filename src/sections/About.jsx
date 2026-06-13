@@ -9,6 +9,7 @@ function About() {
   return (
     <Section
     isDark={true}
+    id='about'
     >
       <div className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-30'>
         <div className='relative min-h-[560px]'>

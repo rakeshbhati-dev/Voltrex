@@ -16,7 +16,9 @@ function Gallery() {
   const next = () => setCurrent((i) => (i === images.length - 1 ? 0 : i + 1))
 
   return (
-    <Section isDark={false}>
+    <Section isDark={false}
+    id='gallery'
+    >
       <SectionTitle
         label='Inside Voltrex'
         title='The Facility'

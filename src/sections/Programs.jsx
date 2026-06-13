@@ -10,7 +10,7 @@ import YOGA from '../assets/images/yoga.jpg'
 
 function Programs() {
   return (
-    <Section>
+    <Section id='programs'>
       <div className='flex flex-wrap gap-4 justify-between items-end mb-10'>
         <SectionTitle
           label='What we offer'

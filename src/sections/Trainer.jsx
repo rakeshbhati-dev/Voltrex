@@ -9,6 +9,7 @@ function Trainer() {
   return (
     <Section
     isDark={false}
+    id='trainers'
     >
         <div className='flex items-center gap-2 justify-center mb-2'>
             <div className='w-[24px] h-[2px] bg-primary'></div>
