@@ -16,7 +16,7 @@ function Navbar() {
                     <a href="" className='hover:text-primaryDark'>GALLERY</a>
                     <a href="" className='hover:text-primaryDark'>ABOUT</a>
                 </div>
-                <Button title='JOIN NOW' buttonStyle='hidden md:block' />
+                <Button title='JOIN NOW' buttonStyle='hidden md:block text-white' />
                 <button className='md:hidden text-primary'
                     onClick={() => setIsOpen((prev) => !prev)}
                 >

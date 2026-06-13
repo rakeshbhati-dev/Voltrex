@@ -21,11 +21,11 @@ function Hero() {
                  <div className='flex gap-4 mt-7 z-40'>
                     <Button 
                  title='Start training'
-                 buttonStyle='md:py-4 cursor-pointer z-40'
+                 buttonStyle='md:py-4 text-white cursor-pointer z-40'
                  />
                  <Button 
                  title='View Programs'
-                 buttonStyle='bg-transparent border border-gray md:py-4 hover:bg-primary hover:border-primary cursor-pointer z-40'
+                 buttonStyle='text-white bg-transparent border border-gray md:py-4 hover:bg-primary hover:border-primary cursor-pointer z-40'
                  />
                  </div>
             </div>
