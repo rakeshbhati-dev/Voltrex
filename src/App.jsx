@@ -11,8 +11,10 @@ import Footer from './sections/Footer'
 
 function App() {
   return (
-    <div className='bg-dark text-sans leading-normal'>
-      <Navbar />
+    <>
+    
+    <div className='bg-dark text-sans leading-normal scroll-smooth'>
+       <Navbar />
       <Hero />
       <Programs />
       <About />
@@ -22,6 +24,7 @@ function App() {
       <Banner />
       <Footer />
     </div>
+    </>
   )
 }
 
