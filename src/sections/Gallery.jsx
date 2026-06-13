@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import Section from '../components/Section'
 import SectionTitle from '../components/SectionTitle'
 import Dreadmill from '../assets/images/dreadmill.jpg'
@@ -7,16 +7,60 @@ import Dumbell2 from '../assets/images/dumbell-2.jpg'
 import Interior from '../assets/images/interior.jpg'
 import Machines from '../assets/images/machines.jpg'
 
+const images = [Dumbell, Dumbell2, Dreadmill, Machines, Interior]
+
 function Gallery() {
+  const [current, setCurrent] = useState(0)
+
+  const prev = () => setCurrent((i) => (i === 0 ? images.length - 1 : i - 1))
+  const next = () => setCurrent((i) => (i === images.length - 1 ? 0 : i + 1))
+
   return (
-    <Section
-      isDark={false}
-    >
+    <Section isDark={false}>
       <SectionTitle
         label='Inside Voltrex'
         title='The Facility'
       />
-      <div className="grid grid-cols-12 grid-rows-[240px_240px] gap-1 mt-10">
+
+      {/* ── MOBILE: carousel ── */}
+      <div className="relative mt-10 md:hidden">
+        <div className="overflow-hidden h-[280px]">
+          <img
+            src={images[current]}
+            alt=""
+            className="w-full h-full object-cover brightness-[0.8]"
+          />
+        </div>
+
+        <button
+          onClick={prev}
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-primary/80 hover:bg-primary text-white w-9 h-9 flex items-center justify-center transition-colors duration-200"
+        >
+          &#8592;
+        </button>
+
+        <button
+          onClick={next}
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-primary/80 hover:bg-primary text-white w-9 h-9 flex items-center justify-center transition-colors duration-200"
+        >
+          &#8594;
+        </button>
+
+        <div className="flex justify-center gap-2 mt-3">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-1.5 h-1.5 rounded-full transition-colors duration-200 ${
+                i === current ? 'bg-primary' : 'bg-white/30'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* ── DESKTOP: original grid ── */}
+      <div className="hidden md:grid grid-cols-12 grid-rows-[240px_240px] gap-1 mt-10">
 
         <div className="col-start-1 col-end-5 row-start-1 row-end-3 overflow-hidden relative group">
           <img
