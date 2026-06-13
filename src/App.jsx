@@ -5,6 +5,7 @@ import Programs from './sections/Programs'
 import About from './sections/About'
 import Trainer from './sections/Trainer'
 import Plans from './sections/Plans'
+import Gallery from './sections/Gallery'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Trainer />
       <Plans />
+      <Gallery />
     </div>
   )
 }
