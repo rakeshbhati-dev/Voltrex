@@ -63,7 +63,7 @@ function Footer() {
 
       {/* ── BOTTOM ── */}
       <div className="border-t border-white/10 pt-6 flex flex-col-reverse md:flex-row items-center justify-between gap-3 text-[12px] text-gray">
-        <span>© 2025 VOLTREX GYM. All rights reserved.</span>
+        <span>© 2026 VOLTREX GYM. All rights reserved.</span>
         <div className="flex gap-4">
           <a href="#" className="hover:text-primary transition-colors duration-200">Privacy Policy</a>
           <span className="text-white/10">·</span>
