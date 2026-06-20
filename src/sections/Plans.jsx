@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Section from '../components/Section'
 import PlanCard from '../components/PlanCard'
+import FormModal from '../components/FormModal'
 
 function Plans() {
     const plans = [
@@ -23,6 +24,16 @@ function Plans() {
             isPopular: false,
         },
     ]
+
+    const [price,setPrice]=useState(2999)
+    const [showModal,setShowModal]=useState(false)
+
+    function handleClick(price){
+        const numericPrice = Number(price.replace(/,/g, ''));
+        setPrice(numericPrice)
+        setShowModal(true)
+        console.log(numericPrice)
+    }
 
     const [selected, setSelected] = useState(1)
     return (
@@ -49,9 +60,14 @@ function Plans() {
             isPopular={plan.isPopular}
             isSelected={selected === i}
             onSelect={() => setSelected(i)}
+            onClick={()=>handleClick(plan.price)}
           />
         ))}
       </div>
+      {
+                showModal &&
+                <FormModal onClose={()=>setShowModal(false)} planPrice={price} />
+            }
         </Section>
     )
 }

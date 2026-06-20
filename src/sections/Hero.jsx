@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeroBg from '../assets/images/hero-bg.jpg'
 import Button from '../components/Button'
 import Stats from '../components/Stats'
+import FormModal from '../components/FormModal'
 
 function Hero() {
+    const [showModal,setShowModal]=useState(false)
     return (
         <div
             className='min-h-[90vh] w-full relative flex md:items-end items-center'
@@ -19,12 +21,11 @@ function Hero() {
                  </h1>
                  <p className='text-gray tracking-widest max-w-[480px] mt-5'>No excuses. No shortcuts. Just relentless work — every day, every rep, every set. Your transformation starts here.</p>
                  <div className='flex gap-4 mt-7 z-20'>
-                   <a href="#footer" className='z-20'>
                      <Button 
                  title='Start training'
-                 buttonStyle='md:py-4 text-white cursor-pointer'
+                 buttonStyle='md:py-4 text-white cursor-pointer z-20'
+                 onClick={()=>setShowModal(true)}
                  />
-                   </a>
                  <a href="#programs" className='z-20'>
                     <Button 
                  title='View Programs'
@@ -47,6 +48,10 @@ function Hero() {
                 subHeading='Success Rate'
                 />
             </div>
+            {
+                showModal &&
+                <FormModal onClose={()=>setShowModal(false)} planPrice={2999} />
+            }
         </div>
     )
 }

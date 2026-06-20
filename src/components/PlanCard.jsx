@@ -8,7 +8,8 @@ function PlanCard({
     features = [],
     isPopular,
     isSelected,
-    onSelect
+    onSelect,
+    onClick
 }) {
     return (
         <div
@@ -118,6 +119,7 @@ function PlanCard({
                     }
                     ${!isSelected ? 'hidden md:block' : 'block'}
                 `}
+                onClick={onClick}
             />
         </div>
     )

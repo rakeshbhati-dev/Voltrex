@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import Logo from './Logo'
 import Button from './Button'
 import { Menu, X } from 'lucide-react'
+import FormModal from './FormModal'
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
+    const [showModal,setShowModal]=useState(false)
     return (
         <nav className='bg-dark border-b border-border sticky top-0 z-50'>
             <div className='flex justify-between items-center py-6 px-6 md:px-10'>
@@ -16,7 +18,7 @@ function Navbar() {
                     <a href="#gallery" className='hover:text-primaryDark'>GALLERY</a>
                     <a href="#about" className='hover:text-primaryDark'>ABOUT</a>
                 </div>
-                <a href="#footer"><Button title='JOIN NOW' buttonStyle='hidden md:block text-white cursor-pointer' /></a>
+                <Button title='JOIN NOW' buttonStyle='hidden md:block text-white cursor-pointer' onClick={()=>setShowModal(true)} />
                 <button className='md:hidden text-primary'
                     onClick={() => setIsOpen((prev) => !prev)}
                 >
@@ -31,6 +33,10 @@ function Navbar() {
                 <a href="" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>GALLERY</a>
                 <a href="" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>ABOUT</a>
             </div>
+            }
+            {
+                showModal &&
+                <FormModal onClose={()=>setShowModal(false)} planPrice={2999} />
             }
         </nav>
     )
