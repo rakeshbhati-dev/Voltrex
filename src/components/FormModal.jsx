@@ -117,7 +117,7 @@ function FormModal({ onClose, planPrice }) {
                 </button>
 
                 <h2 className="text-2xl font-semibold mb-1 text-white font-sans">
-                    Book Your Slot
+                    Start your Membership
                 </h2>
                 <p className="text-gray mb-6 text-sm">
                     Fill in your details and we'll confirm shortly.
