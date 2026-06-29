@@ -27,11 +27,11 @@ function Navbar() {
             </div>
             {isOpen &&
             <div className='md:hidden bg-dark border-t border-border px-6 py-4 flex flex-col gap-4 text-xs text-gray font-semibold tracking-wider'>
-                <a href="" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>PROGRAMS</a>
-                <a href="" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>TRAINERS</a>
-                <a href="" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>PRICING</a>
-                <a href="" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>GALLERY</a>
-                <a href="" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>ABOUT</a>
+                <a href="#programs" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>PROGRAMS</a>
+                <a href="#trainers" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>TRAINERS</a>
+                <a href="#plans" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>PRICING</a>
+                <a href="#gallery" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>GALLERY</a>
+                <a href="#about" className='hover:text-primary' onClick={()=>setIsOpen((prev)=>!prev)}>ABOUT</a>
             </div>
             }
             {
